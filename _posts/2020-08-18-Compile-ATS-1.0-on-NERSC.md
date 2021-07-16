@@ -247,7 +247,7 @@ salloc -N 1 -C haswell -q interactive -t 00:30:00 -L SCRATCH
 - partion mesh. 
 
 ```bash
-srun -n 128 meshconvert --partition-method=2 ../American_final_mesh-100m-gauss3.exo ./American_final_mesh.par
+srun -n 128 meshconvert --partition-method=2 ../CoalCreek_mesh-100m-frac1pct-landcover.exo ./CoalCreek_final_mesh.par
 ```
 
 - launch job

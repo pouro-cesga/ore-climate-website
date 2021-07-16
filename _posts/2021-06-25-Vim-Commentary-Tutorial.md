@@ -40,7 +40,7 @@ autocmd FileType sh,python,text setlocal commentstring=#%s
 noremap <leader>/ :Commentary<cr>
 ```
 
-Here `<leader>` is mapped to back slash `\` by default. You can set to other key using `:let mapleader = ","` for example. 
+Here `<leader>` is mapped to back slash `\` by default. You can set to other key using `:let mapleader = ","` for example. `noremap` stands for non-recursive mapping. `<cr>` at the end is a carriage return (similar to press `return` to execute the commands)
 
 ## Comment and Uncomment
 
@@ -80,3 +80,15 @@ noremap <leader>/ :Commentary<cr>
 	  ```
 	
 	  
+
+## FAQ
+
+1. If using `neovim`, install plugin using built-in package manager, then the rest is the same as vim.
+
+   ```bash
+   mkdir -p ~/.local/share/nvim/site/pack/plugins/start
+   cd ~/.local/share/nvim/site/pack/plugins/start
+   git clone https://tpope.io/vim/commentary.git
+   ```
+
+   
