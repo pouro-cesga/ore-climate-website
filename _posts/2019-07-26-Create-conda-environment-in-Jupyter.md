@@ -1,6 +1,10 @@
 # Conda environment in Jupyter
 
-This will show how to create customized conda environment on Mac.
+This will show how to create customized conda environment on Mac/Linux.
+
+## Install conda
+
+Refer to the [user guide](https://conda.io/projects/conda/en/latest/user-guide/install/index.html)
 
 ## Create new conda env
 
