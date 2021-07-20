@@ -7,7 +7,7 @@ This post follows Ethan's [documentation](https://ecoon.github.io/watershed-work
 - for general use
 
 ```bash
-$ conda create -n watershed_workflow -c conda-forge -c defaults python=3 ipython numpy matplotlib scipy meshpy fiona rasterio shapely cartopy descartes ipykernel requests sortedcontainers attrs pytest pandas geopandas netcdf4 tqdm libarchive # added a few more
+$ conda create -n watershed_workflow -c conda-forge -c defaults python=3 ipython ipykernel jupyterlab nb_conda_kernels numpy matplotlib scipy meshpy fiona rasterio shapely cartopy pyepsg descartes pyproj requests sortedcontainers attrs pytest pandas geopandas netcdf4 h5py tqdm libarchive # added a few more
 $ conda activate watershed_workflow
 ```
 
