@@ -7,7 +7,7 @@ This post follows Ethan's [documentation](https://ecoon.github.io/watershed-work
 - for general use
 
 ```bash
-$ conda create -n workflow-021121 -c conda-forge -c defaults python=3 ipython numpy matplotlib scipy meshpy fiona rasterio shapely cartopy descartes ipykernel requests sortedcontainers attrs pytest pandas geopandas netcdf4 tqdm libarchive # added a few more
+$ conda create -n watershed_workflow -c conda-forge -c defaults python=3 ipython numpy matplotlib scipy meshpy fiona rasterio shapely cartopy descartes ipykernel requests sortedcontainers attrs pytest pandas geopandas netcdf4 tqdm libarchive # added a few more
 $ conda activate watershed_workflow
 ```
 
@@ -55,8 +55,8 @@ $ cd watershed-workflow/workflow_tpls/
 $ vi configure-seacas.sh
 
 # edit the following lines
-CC=`which clang`  # `which gcc` for Linux
-CXX=`which clang++`  # `which g++` for Linux
+CC=`which clang`  # use `which gcc` for Linux
+CXX=`which clang++`  # use `which g++` for Linux
 FC=`which gfortran`
 # add/change the following path
 CONDA_PREFIX=/opt/anaconda3/envs/watershed_workflow
@@ -104,15 +104,14 @@ PythonInterp_FIND_VERSION:STRING=3.7
 $ make install
 ```
 
-### Install workflow packages
+### Export paths
 
 ```bash
 $ cd /path/to/watershed-workflow/repository
 # add this and its subfolder `workflow_tpls` to `.bash_profile` to make it permanently
 $ export PYTHONPATH=`pwd`:`pwd`/workflow_tpls:`pwd`/workflow:${PYTHONPATH}
 # add the following for exodus to work
-$ export PYTHONPATH="${PYTHONPATH}:/Users/shua784/Dropbox/github/seacas/install/lib" 
-
+$ export PYTHONPATH="${PYTHONPATH}:/path/to/seacas/install/lib" 
 ```
 
 ## Install Exodus II (on NERSC)
@@ -170,14 +169,14 @@ CC=`which cc`  # `which gcc` for Linux
 CXX=`which CC`  # `which g++` for Linux
 FC=`which ftn`
 
-CONDA_PREFIX=/global/homes/p/pshuai/.conda/envs/watershed
-SEACAS_SRC_DIR=/global/project/projectdirs/m1800/pin/github/seacas
+CONDA_PREFIX=/path/to/.conda/envs/watershed
+SEACAS_SRC_DIR=/path/to/seacas/repo
 ...
 ```
 
-### change python version
+### Change python version
 
-May need to change python version from 2.7 to 3.7.
+May need to change python version from 2.7 to 3.7 or higher.
 
 ```bash
 $ cd seacas/build
@@ -206,7 +205,7 @@ make install
 
 ```python
 import os,sys
-sys.path.append(os.path.abspath("/Users/shua784/Dropbox/github/watershed-workflow"))
+sys.path.append(os.path.abspath("/path/to/watershed-workflow"))
 ```
 
 2. `tinytree` could not be imported
