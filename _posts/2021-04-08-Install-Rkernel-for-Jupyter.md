@@ -1,6 +1,6 @@
 # Install R kernel for Jupyter notebook
 
-This instruction works on Linux and macos platform. It is mostly borrowed from this [post](https://izoda.github.io/site/anaconda/r-jupyter-notebook/), and has been tested on Linux machine. 
+This instruction works on Linux and macos platform. It is mostly borrowed from this [post](https://irkernel.github.io/installation) and [post](https://izoda.github.io/site/anaconda/r-jupyter-notebook/), and has been tested on Linux machine. 
 
 ### Create conda env and install r-irkernel
 

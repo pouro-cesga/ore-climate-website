@@ -1,35 +1,46 @@
 # Install PFLOTRAN on MAC
 
-The [documentation](https://www.pflotran.org/documentation/user_guide/how_to/installation/linux.html#linux-install) shows the steps for Linux and is the same for MacOS.
+The [documentation](https://www.pflotran.org/documentation/user_guide/how_to/installation/linux.html#linux-install) shows the steps for Linux and is the same for MacOS. The steps have been updated for PFLOTRAN v4.0
 
 ## Install fortran compiler
 
 Go to this [website](https://github.com/fxcoudert/gfortran-for-macOS/releases) to download the latest `gfortran` installer for macOS. Then install `gfortran` on mac.
 
-## Download and install Petsc
+Check to see if it is available:
 
 ```bash
-git clone https://gitlab.com/petsc/petsc.git petsc_v3.11.3
-cd petsc_v3.11.3
-git checkout v3.11.3
+which gfortran # it should print out the path to the executable
+```
+
+## Download and install Petsc
+
+Petsc version may change over time. Check the latest compatible version on [documentation](https://www.pflotran.org/documentation/user_guide/how_to/installation/linux.html#linux-install)
+
+```bash
+git clone https://gitlab.com/petsc/petsc.git petsc_v3.16.2
+cd petsc_v3.16.2
+git checkout v3.16.2
 ```
 
 ## configure Petsc
 
-- define `PETSC_DIR` and `PETSC_ARCH`. You will see prompts when the configuration is completed.
+- Configure (This will take ~30 min)
+
+```bash
+# must include --download-hdf5-fortran-bindings=yes
+./configure --CFLAGS='-O3' --CXXFLAGS='-O3' --FFLAGS='-O3' --with-debugging=no --download-mpich=yes --download-hdf5=yes --download-hdf5-fortran-bindings=yes --download-fblaslapack=yes --download-metis=yes --download-parmetis=yes
+
+# python2.7 ./config/configure.py --CFLAGS='-O3' --CXXFLAGS='-O3' --FFLAGS='-O3' --with-debugging=no --download-mpich=yes --download-hdf5=yes --download-fblaslapack=yes --download-metis=yes --download-parmetis=yes --download-cmake=yes
+```
+
+note: only python v2 is supported.
+
+- define `PETSC_DIR` and `PETSC_ARCH`. You will see prompts when the configuration is completed. Note: you can also find out the `PETSC_ARCH` by looking in the `configure.log` file and search for `PETSC_ARCH` after configuration is done.
 
 ```bash
 export PETSC_DIR=$PWD
 export PETSC_ARCH=arch-darwin-c-release 
 ```
-
-- Configure
-
-```bash
-python2.7 ./config/configure.py --CFLAGS='-O3' --CXXFLAGS='-O3' --FFLAGS='-O3' --with-debugging=no --download-mpich=yes --download-hdf5=yes --download-fblaslapack=yes --download-metis=yes --download-parmetis=yes --download-cmake=yes
-```
-
-note: only python v2 is supported.
 
 ## Compile Petsc
 
@@ -42,7 +53,10 @@ make all
 
 ```bash
 git clone https://bitbucket.org/pflotran/pflotran
+# optionally checkout a tag version
+git checkout maint/v4.0
 cd pflotran/src/pflotran
+# compile using multiple cores (e.g., 4 cores)
 make -j4 pflotran
 ```
 
@@ -77,5 +91,8 @@ git pull
 ```bash
 cd pflotran/src/pflotran
 make -j4 pflotran
+
+# fast recompile (this will not rebuild all dependencies, but can be useful for Sandbox testing)
+make pflotran fast=1
 ```
 

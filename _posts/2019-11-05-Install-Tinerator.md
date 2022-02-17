@@ -117,6 +117,8 @@ vi ~/.pylagritrc
 
 ## Install Tinerator
 
+see [installation guide](https://lanl.github.io/tinerator/user_guide/installation.html)
+
 ```bash
 git clone https://github.com/lanl/LaGriT.git tinerator && cd tinerator && git checkout tinerator
 python setup.py install
