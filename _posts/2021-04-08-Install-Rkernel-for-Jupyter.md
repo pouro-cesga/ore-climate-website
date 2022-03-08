@@ -11,7 +11,25 @@ conda activate r-kernel
 (r-kernel)$ conda install r-recommended r-irkernel jupyter
 ```
 
-### Add r kernel to jupyter kernel spec [important]
+#### Install a specific version of R
+
+```bash
+# create conda env
+conda create --name r_3.4.3
+conda activate r_3.4.3
+# search and install a different r version
+(r_3.4.3) $ conda search r-base
+(r_3.4.3) $ conda install -c r r=3.4.3
+# after successful installation. check the R version
+(r_3.4.3) $ which R
+(r_3.4.3) $ R
+# install irkernel and jupyter 
+conda istall -c r r-irkernel jupyter
+```
+
+
+
+### Add r kernel to jupyter kernel spec [important!]
 
 ```bash
 (r-kernel)$ R -e 'IRkernel::installspec()'

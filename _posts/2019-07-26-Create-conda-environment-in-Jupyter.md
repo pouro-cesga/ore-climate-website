@@ -8,11 +8,21 @@ Refer to the [user guide](https://conda.io/projects/conda/en/latest/user-guide/i
 
 ## Create new conda env
 
+### Python
+
 This example shows how to create new environment called `my_env` while specify the python version you want. The packages are optional.
 
 ```bash
 $ conda create --name my_env -c conda-forge python jupyterlab=3 ipykernel ipywidgets ipyleaflet numpy pandas scipy scikit-learn matplotlib seaborn tqdm shapely rasterio PyShp geopandas h5py xarray rioxarray plotly jupyterlab-git cartopy
 ```
+
+
+
+### R
+
+Install R version in conda env.
+
+
 
 ## Create kernel spec file (must do this inside the activated env!)
 

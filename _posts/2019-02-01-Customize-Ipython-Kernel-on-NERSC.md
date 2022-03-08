@@ -97,7 +97,7 @@ source activate <my_env>
 ## Customize Jupyter Kernel
 
   - find `kernel.json` file
-    The `kernel-spec` file should be located under your environment folder ($HOME/.conda/envs/nersc/share/jupyter/kernels/python3/kernel.json). Find detailed instruction [here](http://www.nersc.gov/users/data-analytics/data-analytics-2/jupyter-and-rstudio/)
+    The `kernel-spec` file should be located under your environment folder (`$HOME/.conda/envs/nersc/share/jupyter/kernels/python3/kernel.json`). Find detailed instruction [here](http://www.nersc.gov/users/data-analytics/data-analytics-2/jupyter-and-rstudio/)
   - edit `kernel.json` file to point python at the python in your`.conda` direcctory. You'll need to change the `"argv"` path to your conda directory like below:
   ```python
   {
