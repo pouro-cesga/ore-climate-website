@@ -146,6 +146,14 @@ Library/
 
 - use shortcut `Ctrl + T` does not apply the ignore rules? Try `fzf` instead.
 
+### unignore files
+If we don't want to ignore the files in the `.ignore, .gitignore, .rgignore` files, we can use the following command.
+
+```bash
+# search all files including hidden and ignore files
+rg . --files --hidden --unrestricted | fzf --print0
+```
+
 ### Grep in files
 
 Sometimes we may want to search by keyword in Files instead of filenames. This uses the `rg` backend.
