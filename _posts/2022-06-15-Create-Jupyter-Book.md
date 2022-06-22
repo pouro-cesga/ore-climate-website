@@ -6,6 +6,17 @@ Pre-requisite:
 - Github account
 - Git, Python
 
+- [Create a Jupyter Book](#create-a-jupyter-book)
+  - [Install Jupyter Book](#install-jupyter-book)
+  - [Start with a template](#start-with-a-template)
+    - [Create table of content](#create-table-of-content)
+    - [configuaration](#configuaration)
+  - [Build the book](#build-the-book)
+  - [Publish the book](#publish-the-book)
+  - [Update the book](#update-the-book)
+  - [Use Github Actions](#use-github-actions)
+  - [Helpful tutorials:](#helpful-tutorials)
+
 ## Install Jupyter Book
 ```bash
 # create virtual env

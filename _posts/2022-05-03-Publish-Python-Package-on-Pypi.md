@@ -1,12 +1,20 @@
 # Publish Python Package on Pypi
 
-Table of content
+- [Publish Python Package on Pypi](#publish-python-package-on-pypi)
   - [Create conda environment and install Cookiecutter](#create-conda-environment-and-install-cookiecutter)
   - [Use Cookiecutter to generate template for a python package](#use-cookiecutter-to-generate-template-for-a-python-package)
   - [Push to Github repo](#push-to-github-repo)
     - [Create a repo on Github](#create-a-repo-on-github)
     - [Initialize local repository with Git](#initialize-local-repository-with-git)
   - [Upload to Pypi](#upload-to-pypi)
+  - [Deploy documentation website on Github Pages](#deploy-documentation-website-on-github-pages)
+    - [Setup MkDocs](#setup-mkdocs)
+    - [Deploy the website](#deploy-the-website)
+  - [Update package](#update-package)
+  - [Github Action](#github-action)
+    - [Publish docs](#publish-docs)
+  - [Trouble shooting](#trouble-shooting)
+  - [Reference](#reference)
 
 This post will show the process of creating a python package and publish it on Pypi. The steps mostly follows this [Youtube](https://www.youtube.com/watch?v=7FcX9uWDuIQ) by [Qiusheng Wu](https://github.com/giswqs).
 
@@ -120,6 +128,37 @@ pip install demo -U
 # install a specific version and overwrite the existing ones
 pip install -Iv demo==0.0.2
 ```
+
+## Github Action
+### Publish docs
+
+Use the following template to publish docs. For this to work, you will need to enable read and write permission for workflows (Github --> Settings --> Actions --> General --> Workflow permissions)
+```yaml
+name: docs
+on:
+    push:
+        branches:
+            - main
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: actions/setup-python@v2
+              with:
+                  python-version: 3.9
+            - name: Install dependencies
+              run: |
+                  python -m pip install --upgrade pip
+                  pip install --user --no-cache-dir Cython
+                  # pip install --user -r requirements.txt
+            - name: PKG-TEST
+              run: |
+                  python -m unittest discover tests/
+            - run: pip install -r requirements_docs.txt
+            - run: mkdocs gh-deploy --force 
+```
+
 
 ## Trouble shooting
 1. Pip could not find the latest version even though it is updated on Pypi website.
