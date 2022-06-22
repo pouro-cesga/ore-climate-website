@@ -32,9 +32,9 @@ Otherwise, do
 mkdocs new PROJECT_NAME
 ```
 
-This will create a `mkdocs.yaml` file and a folder named `/docs`. There is a single file named `index.md` within the folder.
+This will create a `mkdocs.yml` file and a folder named `/docs`. There is a single file named `index.md` within the folder.
 
-The format of the `mkdocs.yaml` is as follows:
+The format of the `mkdocs.yml` is as follows:
 ```yaml
 site_name: NAME
 nav:
@@ -71,3 +71,11 @@ Run the following to generate a branch called "gh-pages" in your repo on Github:
 ```
 
 It should autimatically create the website on `USERNAME.github.io/PROJECT_NAME`. Make sure the source of the GitHub Pages under Settings is pointed to `gh-pages` branch and `/(root)` folder.
+
+## Update documentation
+- Update mkdocs.yml. If Jupyter notebooks are included, make sure notebooks are updated under `docs/notebooks` and new notebooks directories are added to `mkdocs.yml`.
+- Deploy
+
+```bash
+ mkdocs gh-deploy
+```

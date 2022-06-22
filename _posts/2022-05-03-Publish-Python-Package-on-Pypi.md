@@ -86,6 +86,44 @@ Simply run the following command under the repo. It should autimatically create 
  mkdocs gh-deploy
 ```
 
+## Update package
+To update the package after changes are made, follow the steps.
+
+1. Change the version number in `setup.py`. E.g., change version: 0.0.1 --> 0.0.2
+
+```bash
+vi setup.py
+# update version: x.y.z
+```
+2. Create a new tarball
+
+```bash
+python setup.py sdist
+```
+3. Upload the new created tarball to Pypi.
+
+```bash
+twine upload dist/demo-0.0.2.tar.gz
+# follow the prompt to enter username and password for PyPI
+# Enter your username: pinshuai
+# Enter your password: xxxx
+```
+4. Check the Pypi website to see the new updated package.
+
+5. To install a newer version of the package:
+
+```bash
+# upgrade the existing one. This may not work well if there are multiple newer versions
+# also make sure to run the command outside of the package repo
+pip install demo -U
+
+# install a specific version and overwrite the existing ones
+pip install -Iv demo==0.0.2
+```
+
+## Trouble shooting
+1. Pip could not find the latest version even though it is updated on Pypi website.
+   - solution: update pip first using `pip install -U pip`, then install the package using `pip install -U PACKAGE_NAME`
 ## Reference
 
 - My `modvis` python package: https://github.com/pinshuai/modvis

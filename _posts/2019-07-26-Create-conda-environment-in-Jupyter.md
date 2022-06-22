@@ -24,7 +24,7 @@ Install R version in conda env.
 
 
 
-## Create kernel spec file (must do this inside the activated env!)
+## Create kernel spec file for Jupyter (must do this inside the activated env!)
 
 In order for Jupyter to find your kernel, run following command and optionally choose the display kernel name
 
