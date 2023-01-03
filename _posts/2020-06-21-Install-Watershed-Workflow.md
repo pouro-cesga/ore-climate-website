@@ -23,9 +23,9 @@ cd ~/github/watershed-workflow
 # use the following for full capability of WW
 python bin/run_ww_lab.py -p=9999 --pull --ats --data-library=/path/to/data_library /path/to/working/directory
 # for example:
-python bin/run_ww_lab.py -p=9999 --pull --ats --data-library=/Users/shua784/github/watershed-workflow/data_library /Users/shua784/github/DRB
+python bin/run_ww_lab.py -p=9999 --pull --ats --data-library=/Users/shuai/github/watershed-workflow/data_library /Users/shuai/github/DRB
 # or 
-docker run -it --rm -p 8899:8888 --pull always -e JUPYTER_ENABLE_LAB=yes -v /Users/shua784/github/watershed-workflow/data_library:/home/jovyan/data:delegated -v /Users/shua784/github/watershed-workflow:/home/jovyan/workdir:delegated ecoon/watershed_workflow-ats:latest
+docker run -it --rm -p 8899:8888 --pull always -e JUPYTER_ENABLE_LAB=yes -v /Users/shuai/github/watershed-workflow/data_library:/home/jovyan/data:delegated -v /Users/shuai/github:/home/jovyan/workdir:delegated ecoon/watershed_workflow-ats:master
 ```
 
 - Follow the terminal prompt and open the browser using url begin with `http://127.0.0.1:9999/lab?token=xxxx`. **note: change port number from 8888 (default) to the one entered in the command line (e.g., 9999)!**

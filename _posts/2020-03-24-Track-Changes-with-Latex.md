@@ -4,9 +4,36 @@ Overleaf has become a popular online latex editor for researchers. One of the ad
 
 Here, I will show a workaround to export tracked-changes version uisng `latexdiff` and `git-latexdiff`.
 
-## Install Latex on Mac
+## Pre-requirements
 
-Download `MacTeX-2019` [here](https://tug.org/mactex/), and follow the instructions to install.
+- Download `MacTeX` [here](https://tug.org/mactex/), and follow the instructions to install. The file size is ~5 GB.
+
+## Diff tex using `git-latexdiff`(recommended for `Git`)
+
+Note source code on [Gitlab](https://gitlab.com/git-latexdiff/git-latexdiff), and this quick [tutorial](http://www.deanbodenham.com/learn/git-and-latexdiff.html)
+
+### install `git-latexdiff`
+
+```bash
+$ git clone https://gitlab.com/git-latexdiff/git-latexdiff.git
+$ cd git-latexdiff
+$ sudo make install
+
+# if installation failed, do manual installation to move `git-latexdiff` into one of the PATH folder
+$ cp git-latexdiff /usr/local/bin/.
+```
+
+### diff command
+
+```bash
+# diff the changes in the previous commit 
+git latexdiff --main manuscript.tex HEAD~1
+# diff changes 2 commits back
+git latexdiff --main manuscript.tex HEAD~2
+# or use commit-hash
+git latexdiff --main manuscript.tex c0b1428d8dc81dbe12bf28b17e83382df31c4200 HEAD
+```
+
 
 ## Diff the tex files using `latexdiff`
 
@@ -44,31 +71,6 @@ latexdiff -t CTRADITIONAL old.tex new.tex > diff.tex
 
 ```bash
 pdflatex -interaction=nonstopmode diff.tex
-```
-
-## Diff tex using `git-latexdiff`(recommended for `Git`)
-
-Note source code on [Gitlab](https://gitlab.com/git-latexdiff/git-latexdiff), and this quick [tutorial](http://www.deanbodenham.com/learn/git-and-latexdiff.html)
-
-### install `git-latexdiff`
-
-```bash
-$ git clone https://gitlab.com/git-latexdiff/git-latexdiff.git
-$ sudo make install
-
-# if installation failed, do manual installation to move `git-latexdiff` into one of the PATH folder
-$ cp git-latexdiff /usr/local/bin/.
-```
-
-### diff command
-
-```bash
-# diff the changes in the previous commit 
-git latexdiff --main manuscript.tex HEAD~1
-# diff changes 2 commits back
-git latexdiff --main manuscript.tex HEAD~2
-# or use commit-hash
-git latexdiff --main manuscript.tex c0b1428d8dc81dbe12bf28b17e83382df31c4200 HEAD
 ```
 
 ## caveats

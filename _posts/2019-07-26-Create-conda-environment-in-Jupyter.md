@@ -13,7 +13,13 @@ Refer to the [user guide](https://conda.io/projects/conda/en/latest/user-guide/i
 This example shows how to create new environment called `my_env` while specify the python version you want. The packages are optional.
 
 ```bash
-$ conda create --name my_env -c conda-forge python jupyterlab=3 ipykernel ipywidgets ipyleaflet numpy pandas scipy scikit-learn matplotlib seaborn tqdm shapely rasterio PyShp geopandas h5py xarray rioxarray plotly jupyterlab-git cartopy
+$ conda create --name my_env -c conda-forge python jupyterlab=3 ipykernel ipywidgets jupyterlab_widgets ipyleaflet numpy pandas scipy scikit-learn matplotlib seaborn tqdm shapely rasterio PyShp geopandas h5py xarray rioxarray plotly jupyterlab-git cartopy
+
+# for jupyter env
+$ conda create --name jupyter -c conda-forge python jupyterlab ipykernel ipywidgets jupyterlab_widgets ipyleaflet jupyterlab-git
+
+# for geo/vis/plot
+$ conda create --name geo -c conda-forge python ipykernel ipywidgets numpy pandas matplotlib seaborn scipy scikit-learn tqdm shapely rasterio PyShp geopandas h5py netcdf4 xarray rioxarray utm cartopy panel nco jupyter_contrib_nbextensions
 ```
 
 

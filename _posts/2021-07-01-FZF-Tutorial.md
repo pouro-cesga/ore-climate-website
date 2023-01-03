@@ -10,9 +10,11 @@ FZF is a command line tool to fuzzy search files. See [github README](https://gi
 $ brew installl fzf
 ```
 
-​	- (optional) Install shell extension to use auto-completion and key binding
+​	- (optional) Follow the prompt to install shell extension to use auto-completion and key binding
 
 ```bash
+$ /opt/homebrew/opt/fzf/install
+#or 
 $ /usr/local/opt/fzf/install # press enter
 ```
 
@@ -106,7 +108,9 @@ set rtp+=/usr/local/opt/fzf
 - add key mapping 
 
 ```bash
+# search current dir
 nnoremap <silent> <leader>f :FZF<cr>
+# search entire home dir
 nnoremap <silent> <leader>F :FZF ~<cr>
 ```
 

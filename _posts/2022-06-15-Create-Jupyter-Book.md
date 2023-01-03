@@ -28,7 +28,7 @@ conda activate jupyterbook
 - From the official website:
 
 ```bash
-jb create ats-workflow
+jb create mybook
 ```
 This will create a folder with some template files. The two most important ones are `_toc.yml` and `_config.yml`.
 
@@ -106,6 +106,8 @@ Now the book should be live at `https://<user>.github.io/<myonlinebook>/`
 Just add or modify the contents, rebuild the book and push it to Github.
 
 ```bash
+# cd into src dir where the _toc.yml is
+cd mybook/src
 jb build .
 ghp-import -n -p -f ./_build/html
 ```
