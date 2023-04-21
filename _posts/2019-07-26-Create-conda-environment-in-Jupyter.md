@@ -1,6 +1,6 @@
 # Conda environment in Jupyter
 
-This will show how to create customized conda environment on Mac/Linux.
+This will show how to create customized conda environment on Mac/Linux. The procedures should also apply to Windows systems.
 
 ## Install conda
 
@@ -10,10 +10,15 @@ Refer to the [user guide](https://conda.io/projects/conda/en/latest/user-guide/i
 
 ### Python
 
-This example shows how to create new environment called `my_env` while specify the python version you want. The packages are optional.
+This example shows how to create new environment called `my_env` while specify the python version you want. Several packages are required including: `python`, `jupyterlab`, `ipykernel`. The other packages are optional and are appended to the end. 
 
 ```bash
-$ conda create --name my_env -c conda-forge python jupyterlab=3 ipykernel ipywidgets jupyterlab_widgets ipyleaflet numpy pandas scipy scikit-learn matplotlib seaborn tqdm shapely rasterio PyShp geopandas h5py xarray rioxarray plotly jupyterlab-git cartopy
+
+# general command. The capital words need to be replaced by the user.
+$ conda create --name ENV_NAME -c conda-forge PACKAGES
+
+# for example, specify python version to 3.6.5
+$ conda create --name my_env -c conda-forge python=3.6.5 jupyterlab=3 ipykernel ipywidgets jupyterlab_widgets ipyleaflet numpy pandas scipy scikit-learn matplotlib seaborn tqdm shapely rasterio PyShp geopandas h5py xarray rioxarray plotly jupyterlab-git cartopy
 
 # for jupyter env
 $ conda create --name jupyter -c conda-forge python jupyterlab ipykernel ipywidgets jupyterlab_widgets ipyleaflet jupyterlab-git
@@ -21,13 +26,6 @@ $ conda create --name jupyter -c conda-forge python jupyterlab ipykernel ipywidg
 # for geo/vis/plot
 $ conda create --name geo -c conda-forge python ipykernel ipywidgets numpy pandas matplotlib seaborn scipy scikit-learn tqdm shapely rasterio PyShp geopandas h5py netcdf4 xarray rioxarray utm cartopy panel nco jupyter_contrib_nbextensions
 ```
-
-
-
-### R
-
-Install R version in conda env.
-
 
 
 ## Create kernel spec file for Jupyter (must do this inside the activated env!)
@@ -38,7 +36,7 @@ In order for Jupyter to find your kernel, run following command and optionally c
 (my_env) $ python -m ipykernel install --user --name my_env --display-name My-Jupyter-Env
 ```
 
-## Install packages
+## Install additional packages
 
 Before you install any package, activate the new conda env just created.
 
@@ -46,7 +44,7 @@ Before you install any package, activate the new conda env just created.
 $ conda activate my_env
 ```
 
-Then install  `ipykernel` and other packages using `conda`
+Then install other packages using `conda`
 
 ```bash
 (my_env) $ conda install ipykernel numpy
@@ -62,7 +60,7 @@ Or using `pip`
 
 ## launch Jupyter
 
-Lauch Jupyter lab and you should see you new kernel `my_env-jupyter` from the kernel dropdown.
+Lauch Jupyter lab and you should see you new kernel `My-Jupyter-Env` from the kernel dropdown.
 
 ```bash
 (my_env) $ jupyter lab

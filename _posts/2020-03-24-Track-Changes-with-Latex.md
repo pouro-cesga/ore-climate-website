@@ -54,6 +54,7 @@ pdflatex diff.tex
 
 Note:
 
+1. Useful commands if the process paused: use `R` to run without stopping, `Q` to run quietly
 1. If exernal file such as `SI.tex` exists, need to run `pdflatex` first on these files.
 
 ```bash
