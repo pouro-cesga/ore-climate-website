@@ -15,3 +15,5 @@ Prior to joining USU, Pin worked as a post-doc and then as a staff scientist at 
 Pin received his PhD in geology with focus on hydrogeology from Texas A&M University (USA) in 2017, and his MS and BS in water resources engineering from Wuhan University (China) in 2013 and 2011, respectively. Most of his previous work has focused on groundwater-surface water interactions under dynamic river flow conditions and their implications on nutrient and contaminant transport and transformation in the hyporheic zone adjacent to riverbanks. He has used both numerical models and field methods to study nitrate cycling in a dam regulated river in Texas as well as arsenic mobilization in the aquifer under tidal influence in Bangladesh. 
 
 Additional details about Pin's research, technical blogs, and CV can be accessed using the menu above. Links to other web profiles are listed on the left panel.
+
+**This website will no longer be maintained. For up-to-date information, please visit our new [Group Website](https://hydroaggie.github.io/)**
