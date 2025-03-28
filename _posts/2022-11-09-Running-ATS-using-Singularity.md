@@ -8,10 +8,16 @@ Here is the instructions on how to run ATS using the Singularity container. This
 
 ## Pull image from Dockerhub
 - Find ATS image: [metis/ats](https://hub.docker.com/r/metsi/ats/tags) and select the appropriate tag
+- (Optional) Request an interactive node if the image is too big. Sometimes the HPC will kill the pulling process due to large memory consumption.
 - Pull using singularity. This will create a file named "ats_master-latest.sif"
 ```bash
-singularity pull docker://metsi/ats:master-latest
+# load module
+$ module load singularity
+
+# pull image from dockerhub. If this failed on HPC, you may need to request an interactive node.
+$ singularity pull ats_master.sif docker://metsi/ats:master-latest
 ```
+
 
 ## Inspect image
 
@@ -23,6 +29,8 @@ singularity shell ats_master-latest.sif
 # inside the image find the compiler and mpich version. E.g., mpich-3.3.2
 singularity> /usr/bin/which mpirun
 singularity> mpirun --version
+Singularity> /usr/bin/which ats
+Singularity> /home/amanzi_user/install/bin/ats --version
 ```
 How to find out the gcc version?
 
@@ -38,7 +46,10 @@ The commands following the image will be executed.
 singularity exec ats_master-latest.sif meshconvert mesh.exo mesh_sim.exo
 
 # use XML converter
-singularity exec ats_master-latest.sif python /home/amanzi_user/amanzi/src/physics/ats/tools/input_converters/xml-1.3-1.4.xml -i input.xml -o output.xml
+singularity exec ats_master-latest.sif python /home/amanzi_user/amanzi/src/physics/ats/tools/input_converters/xml-1.3-1.4.py input.xml -o output.xml
+
+# use python script
+singularity exec $SIF_ATS_1d5 python /home/amanzi_user/amanzi/src/physics/ats/tools/utils/rh_to_vp.py CC_met_data_2014-2018.h5 -f vp.h5
 ```
 
 ### Parallel jobs
@@ -55,5 +66,4 @@ mpirun -np 2 singularity exec ats_master-latest.sif ats --xml_file=input.xml
 
 ## Caveats
 
-If using multiple nodes causes significant slowdown, this likely means that the image itself communicates over ethernet instead of infiniBand. This requires modification of the image to make it compatible on infiniband.
-See an example of modifying image [here](https://github.com/CHPC-UofU/Singularity-meep-mpi). See detailed comparison between Ethernet and Infiniband [here](https://stackoverflow.com/questions/46933493/infiniband-explained).
+- If using multiple nodes causes significant slowdown, this likely means that the image itself communicates over ethernet instead of infiniBand. This requires modification of the image to make it compatible on infiniband. See an example of modifying image [here](https://github.com/CHPC-UofU/Singularity-meep-mpi). See detailed comparison between Ethernet and Infiniband [here](https://stackoverflow.com/questions/46933493/infiniband-explained).

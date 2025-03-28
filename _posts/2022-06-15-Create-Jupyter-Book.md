@@ -71,6 +71,9 @@ bibtex_bibfiles:
 ## Build the book
 Once you have added all the contents, you can build the book using
 ```bash
+# navigate into src/ folder
+cd src/ # or any folder that contains _config.yml
+# build the book
 jb build .
 ```
 This will generate many HTML files which you can preview at `file://Users/my_path_to_book/_build/index.html`. You can continue to add contents and re-build the book. 

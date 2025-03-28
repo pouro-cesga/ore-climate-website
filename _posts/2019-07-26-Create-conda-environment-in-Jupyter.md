@@ -33,6 +33,8 @@ $ conda create --name geo -c conda-forge python ipykernel ipywidgets numpy panda
 In order for Jupyter to find your kernel, run following command and optionally choose the display kernel name
 
 ```bash
+$ conda activate my_env
+
 (my_env) $ python -m ipykernel install --user --name my_env --display-name My-Jupyter-Env
 ```
 
