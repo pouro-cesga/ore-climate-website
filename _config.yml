@@ -11,9 +11,9 @@ title                    : "ORE-CLIMATE"
 title_separator          : "-"
 name                     : &name "Pablo Ouro"
 description              : &description "Offshore renewable energy and climate research group"
-url                      : https://pablo-ouro.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "pablo-ouro.github.io"
+url                      : "https://pouro-cesga.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl                  : "/ore-climate-website" # the subpath of your site, e.g. "/blog"
+repository               : "pouro-cesga/ore-climate-website"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
@@ -88,7 +88,7 @@ author:
   googlescholar    : "https://scholar.google.co.uk/citations?user=_VVX33wAAAAJ&hl=es"
   email            : "pablo.ouro@cesga.es"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
-  uri              : "https://pablo-ouro.github.io"
+  uri              : "https://pouro-cesga.github.io/ore-climate-website"
   bitbucket        :
   codepen          :
   dribbble         :
