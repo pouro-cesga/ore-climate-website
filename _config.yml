@@ -7,13 +7,13 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Pin Shuai, PhD"
+title                    : "ORE-CLIMATE"
 title_separator          : "-"
-name                     : &name "Pin Shuai"
-description              : &description "Assitant Professor @USU"
-url                      : https://pinshuai.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+name                     : &name "Pablo Ouro"
+description              : &description "Offshore renewable energy and climate research group"
+url                      : https://pablo-ouro.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "pinshuai.github.io"
+repository               : "pablo-ouro.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
@@ -80,34 +80,34 @@ analytics:
 
 # Site Author
 author:
-  name             : "Pin Shuai"
+  name             : "Pablo Ouro"
   avatar           : "profile.jpg"
-  bio              : "Assistant Professor @USU"
-  location         : "Logan, UT"
+  bio              : "Lead @ ORE-CLIMATE"
+  location         : "CESGA"
   employer         :
-  googlescholar    : "https://scholar.google.com/citations?user=Md_6je0AAAAJ&hl=en"
-  email            : "Pin.Shuai@usu.edu"
+  googlescholar    : "https://scholar.google.co.uk/citations?user=_VVX33wAAAAJ&hl=es"
+  email            : "pablo.ouro@cesga.es"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
-  uri              : "https://hydroaggie.github.io/"
+  uri              : "https://pablo-ouro.github.io"
   bitbucket        :
   codepen          :
   dribbble         :
   flickr           :
   facebook         :
   foursquare       :
-  github           : "pinshuai"
+  github           : "pablo-ouro"
   google_plus      :
   keybase          :
   instagram        :
   lastfm           :
-  linkedin         : "pshuai"
-  orcid            : "https://orcid.org/0000-0003-2511-9828"
+  linkedin         : 
+  orcid            : 
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : "pinshuai"
+  twitter          : 
   vine             :
   weibo            :
   xing             :
