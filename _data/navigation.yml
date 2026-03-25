@@ -12,10 +12,5 @@ main:
     url: /team/
   - title: "Prospective Students"
     url: /prospective_students/
-  - title: "Teaching"
-    url: /teaching/
-  - title: "Group Handbook"
-    url: /group_handbook/
   - title: "Repositories"
     url: /repositories/
-    
