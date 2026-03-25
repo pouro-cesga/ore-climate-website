@@ -19,7 +19,7 @@ author_profile: true
 </div>
 
 <div style="display: flex; align-items: flex-start; gap: 20px; margin-bottom: 30px;">
-  <img src="/ore-climate-website/images/profile.jpg" alt="Jose Carlos Fernandez" style="width: 150px; border-radius: 5px;">
+  <img src="/ore-climate-website/images/jose_carlos.png" alt="Jose Carlos Fernandez" style="width: 150px; border-radius: 5px;">
   <div>
     <strong>Jose Carlos Fernandez (Co-Lead)</strong><br>
     <em>Researcher</em><br>
