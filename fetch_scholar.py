@@ -31,19 +31,21 @@ for i, pub in enumerate(author['publications'][:20]):
         continue
         
     bib = pub.get('bib', {})
-    title = bib.get('title', 'Unknown Title')
+    title = bib.get('title', 'Unknown Title').replace('"', '\\"')
     year = bib.get('pub_year', '2026')
     authors = bib.get('author', 'Pablo Ouro')
     
-    # Extract journal name, volume, pages
-    journal = bib.get('journal', bib.get('conference', bib.get('venue', 'Unknown Venue')))
+    journal = bib.get('journal', bib.get('conference', bib.get('venue', 'Unknown Journal')))
+    journal = journal.replace('"', '\\"')
     volume = bib.get('volume', '')
     pages = bib.get('pages', '')
     
-    # Format the venue/journal field for the markdown frontmatter
-    venue_display = journal
-    if volume: venue_display += f" {volume}"
-    if pages: venue_display += f", {pages}"
+    vp = ""
+    if volume: vp += str(volume)
+    if pages: 
+        if vp: vp += f", {pages}"
+        else: vp += str(pages)
+    vp = vp.replace('"', '\\"')
     
     filename_title = re.sub(r'[^a-zA-Z0-9]+', '_', title.lower())[:40].strip('_')
     filename = f"{year}_{filename_title}.md"
@@ -54,13 +56,9 @@ for i, pub in enumerate(author['publications'][:20]):
         f.write(f"collection: publications\n")
         f.write(f"permalink: /publication/{year}-{filename_title}\n")
         f.write(f"date: {year}-01-01\n")
-        f.write(f"venue: '{venue_display}'\n")
+        f.write(f"journal: \"{journal}\"\n")
+        f.write(f"authors: \"{authors}\"\n")
+        f.write(f"volume_pages: \"{vp}\"\n")
         f.write(f"---\n\n")
-        f.write(f"**Authors:** {authors}<br>\n")
-        f.write(f"**Title:** {title}<br>\n")
-        f.write(f"**Year:** {year}<br>\n")
-        f.write(f"**Journal/Venue:** {journal}<br>\n")
-        if volume: f.write(f"**Volume:** {volume}<br>\n")
-        if pages: f.write(f"**Pages:** {pages}<br>\n")
 
 print("Done generating publications.")

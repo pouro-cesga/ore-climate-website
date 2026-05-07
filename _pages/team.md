@@ -20,6 +20,19 @@ author_profile: true
   </div>
 </div>
 
+<h4 style="margin-top: 5px; margin-bottom: 10px;">Selected Publications</h4>
+<ul style="font-size: 0.9em; margin-bottom: 40px;">
+{% for post in site.publications reversed %}
+  <li style="margin-bottom: 10px;">
+    <strong><a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a></strong><br>
+    {{ post.authors }}<br>
+    <i>{{ post.journal }}</i>{% if post.volume_pages and post.volume_pages != '' %}, {{ post.volume_pages }}{% endif %}, {{ post.date | default: "1900-01-01" | date: "%Y" }}
+  </li>
+{% endfor %}
+</ul>
+
+<hr>
+
 <div style="display: flex; align-items: flex-start; gap: 20px; margin-bottom: 30px;">
   <img src="/ore-climate-website/images/jose_carlos.png" alt="Jose Carlos Fernandez" style="width: 150px; border-radius: 5px;">
   <div>
