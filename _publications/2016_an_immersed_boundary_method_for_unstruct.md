@@ -5,7 +5,7 @@ permalink: /publication/2016-an_immersed_boundary_method_for_unstruct
 date: 2016-01-01
 pub_year: "2016"
 journal: "International Journal for Numerical Methods in Fluids"
-authors: "<strong><span style="color: black;">Pablo Ouro</span></strong>, Luis Cea, Luis Ramírez, Xesús Nogueira"
+authors: "<strong><span style='color: black;'>Pablo Ouro</span></strong>, Luis Cea, Luis Ramírez, Xesús Nogueira"
 volume_pages: "81, 672-688"
 ---
 

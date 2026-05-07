@@ -5,7 +5,7 @@ permalink: /publication/2021-experimental_investigation_of_the_wake_c
 date: 2021-01-01
 pub_year: "2021"
 journal: "Energy Conversion and Management"
-authors: "Stephanie Müller, Valentine Muhawenimana, Catherine AME Wilson, <strong><span style="color: black;">Pablo Ouro</span></strong>"
+authors: "Stephanie Müller, Valentine Muhawenimana, Catherine AME Wilson, <strong><span style='color: black;'>Pablo Ouro</span></strong>"
 volume_pages: "247, 114768"
 ---
 

@@ -5,7 +5,7 @@ permalink: /publication/2023-using_vortex_generators_for_flow_separat
 date: 2023-01-01
 pub_year: "2023"
 journal: "Renewable Energy"
-authors: "Marinos Manolesos, Lowri Chng, Nicholas Kaufmann, <strong><span style="color: black;">Pablo Ouro</span></strong>, Dimitri Ntouras, George Papadakis"
+authors: "Marinos Manolesos, Lowri Chng, Nicholas Kaufmann, <strong><span style='color: black;'>Pablo Ouro</span></strong>, Dimitri Ntouras, George Papadakis"
 volume_pages: "205, 1025-1039"
 ---
 
