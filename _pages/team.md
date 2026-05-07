@@ -21,7 +21,7 @@ author_profile: true
 </div>
 
 <h4 style="margin-top: 5px; margin-bottom: 10px;">Selected Publications</h4>
-<ul style="font-size: 0.9em; margin-bottom: 40px;">
+<ul style="font-size: 0.85em; margin-bottom: 40px;">
 {% for post in site.publications reversed %}
   <li style="margin-bottom: 10px;">
     <strong><a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a></strong><br>

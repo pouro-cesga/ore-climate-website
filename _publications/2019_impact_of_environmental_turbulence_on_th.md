@@ -4,7 +4,7 @@ collection: publications
 permalink: /publication/2019-impact_of_environmental_turbulence_on_th
 date: 2019-01-01
 journal: "Flow, Turbulence and Combustion"
-authors: "P Ouro and T Stoesser"
+authors: "<strong><span style="color: black;">P Ouro</span></strong>, T Stoesser"
 volume_pages: "102, 613-639"
 ---
 

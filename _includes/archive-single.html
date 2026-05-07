@@ -15,7 +15,7 @@
 {% if post.collection == 'publications' %}
 <div class="list__item" style="margin-bottom: 20px;">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    <p style="margin: 0; line-height: 1.5;">
+    <p style="margin: 0; line-height: 1.5; font-size: 0.85em;">
       <strong><a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a></strong><br>
       {{ post.authors }}<br>
       <i>{{ post.journal }}</i>{% if post.volume_pages and post.volume_pages != '' %}, {{ post.volume_pages }}{% endif %}, {{ post.date | default: "1900-01-01" | date: "%Y" }}

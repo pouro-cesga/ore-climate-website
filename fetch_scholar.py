@@ -23,7 +23,7 @@ for f in os.listdir(pub_dir):
     if f.endswith('.md'):
         os.remove(os.path.join(pub_dir, f))
 
-for i, pub in enumerate(author['publications'][:20]):
+for i, pub in enumerate(author['publications'][:100]):
     try:
         scholarly.fill(pub)
     except Exception as e:
@@ -34,6 +34,18 @@ for i, pub in enumerate(author['publications'][:20]):
     title = bib.get('title', 'Unknown Title').replace('"', '\\"')
     year = bib.get('pub_year', '2026')
     authors = bib.get('author', 'Pablo Ouro')
+    
+    # Highlight group members in black font
+    members = ["Ouro", "Fernandez", "Rosquete", "Vigara"]
+    if authors:
+        authors = authors.replace(' and ', ', ')
+        parts = authors.split(',')
+        for j in range(len(parts)):
+            for m in members:
+                if m.lower() in parts[j].lower() and '<strong>' not in parts[j]:
+                    parts[j] = f'<strong><span style="color: black;">{parts[j].strip()}</span></strong>'
+            parts[j] = parts[j].strip()
+        authors = ', '.join(parts).strip()
     
     journal = bib.get('journal', bib.get('conference', bib.get('venue', 'Unknown Journal')))
     journal = journal.replace('"', '\\"')

@@ -4,7 +4,7 @@ collection: publications
 permalink: /publication/2023-microplastic_and_natural_sediment_in_bed
 date: 2023-01-01
 journal: "Water Research"
-authors: "James Lofty and Daniel Valero and Catherine AME Wilson and Mário J Franca and Pablo Ouro"
+authors: "James Lofty, Daniel Valero, Catherine AME Wilson, Mário J Franca, <strong><span style="color: black;">Pablo Ouro</span></strong>"
 volume_pages: "243, 120329"
 ---
 

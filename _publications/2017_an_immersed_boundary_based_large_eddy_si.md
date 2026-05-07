@@ -4,7 +4,7 @@ collection: publications
 permalink: /publication/2017-an_immersed_boundary_based_large_eddy_si
 date: 2017-01-01
 journal: "Computers & Fluids"
-authors: "Pablo Ouro and Thorsten Stoesser"
+authors: "<strong><span style="color: black;">Pablo Ouro</span></strong>, Thorsten Stoesser"
 volume_pages: "152, 74-87"
 ---
 
