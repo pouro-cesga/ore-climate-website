@@ -3,10 +3,12 @@ title: "Effect of Blade Cambering on Dynamic Stall in View of Designing Vertical
 collection: publications
 permalink: /publication/2018-effect_of_blade_cambering_on_dynamic_sta
 date: 2018-01-01
-venue: 'ASME Journal of Fluids Engineering 140 (6), 061104, 2018'
+venue: 'ASME Journal of Fluids Engineering 140, 061104'
 ---
 
-**Authors:** P Ouro, T Stoesser, L Ramirez<br>
+**Authors:** Pablo Ouro and Thorsten Stoesser and Luis Ramirez<br>
 **Title:** Effect of Blade Cambering on Dynamic Stall in View of Designing Vertical Axis Turbines<br>
 **Year:** 2018<br>
-**Journal/Venue:** ASME Journal of Fluids Engineering 140 (6), 061104, 2018
+**Journal/Venue:** ASME Journal of Fluids Engineering<br>
+**Volume:** 140<br>
+**Pages:** 061104<br>

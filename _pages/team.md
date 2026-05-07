@@ -13,7 +13,9 @@ author_profile: true
     <em>Ramon y Cajal, R3 Fellow</em><br>
     Research interests: Offshore renewable energy, meso-microscale simulation, wind farms, solar farms, tidal-stream energy.<br>
     <a href="https://scholar.google.co.uk/citations?user=_VVX33wAAAAJ&hl=es" target="_blank" title="Google Scholar"><i class="ai ai-google-scholar-square"></i> Google Scholar</a> | 
-    <a href="mailto:pablo.ouro@cesga.es" title="Email"><i class="fas fa-envelope"></i> pablo.ouro@cesga.es</a><br>
+    <a href="https://www.scopus.com/authid/detail.uri?authorId=56646410800" target="_blank" title="Scopus"><i class="ai ai-scopus-square"></i> Scopus</a> | 
+    <a href="https://www.webofscience.com/wos/author/record/AAF-1134-2021" target="_blank" title="Web of Science"><i class="ai ai-researcherid-square"></i> Web of Science</a><br>
+    <a href="mailto:pablo.ouro@cesga.es" title="Email"><i class="fas fa-envelope"></i> pablo.ouro@cesga.es</a> | 
     <a href="https://www.cesga.es/pablo-ouro-barba/" target="_blank" title="CESGA Profile"><i class="fas fa-link"></i> CESGA Official Site</a>
   </div>
 </div>
