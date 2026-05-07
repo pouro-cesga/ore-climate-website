@@ -68,6 +68,7 @@ for i, pub in enumerate(author['publications'][:100]):
         f.write(f"collection: publications\n")
         f.write(f"permalink: /publication/{year}-{filename_title}\n")
         f.write(f"date: {year}-01-01\n")
+        f.write(f"pub_year: \"{year}\"\n")
         f.write(f"journal: \"{journal}\"\n")
         f.write(f"authors: \"{authors}\"\n")
         f.write(f"volume_pages: \"{vp}\"\n")

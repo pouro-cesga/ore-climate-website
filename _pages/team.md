@@ -26,7 +26,7 @@ author_profile: true
   <li style="margin-bottom: 10px;">
     <strong><a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a></strong><br>
     {{ post.authors }}<br>
-    <i>{{ post.journal }}</i>{% if post.volume_pages and post.volume_pages != '' %}, {{ post.volume_pages }}{% endif %}, {{ post.date | default: "1900-01-01" | date: "%Y" }}
+    <i>{{ post.journal }}</i>{% if post.volume_pages and post.volume_pages != '' %}, {{ post.volume_pages }}{% endif %}, {{ post.pub_year }}
   </li>
 {% endfor %}
 </ul>
